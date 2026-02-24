@@ -45,7 +45,7 @@ public class Main {
             System.out.println(i + 1 + ": length: " + rectangles[i].getLength() + ", width: " + rectangles[i].getWidth() + ", area: " + rectangles[i].area() + ", perimeter: " + rectangles[i].perimeter());
         }*/
         //3. feladat
-        System.out.println(DateUtil.isValidDate(2000,2, 29) == true);
+        /*System.out.println(DateUtil.isValidDate(2000,2, 29) == true);
         System.out.println(DateUtil.isValidDate(2000,2, 30) == false);
         System.out.println(DateUtil.isValidDate(1900,2, 29) == false);
         System.out.println(DateUtil.isValidDate(1900,2, 28) == true);
@@ -57,7 +57,25 @@ public class Main {
         System.out.println(DateUtil.isValidDate(2020,1, 0) == false);
         System.out.println(DateUtil.isValidDate(2020,0, 0) == false);
         System.out.println(DateUtil.isValidDate(2020,4, 31) == false);
-        System.out.println(DateUtil.isValidDate(2020,1, 31) == true);
+        System.out.println(DateUtil.isValidDate(2020,1, 31) == true);*/
+        Random random = new Random();
+        int invalidCount = 0;
+        int targetCount = 1000;
 
+        System.out.println("Érvényes dátumok listája:");
+
+        for (int i = 0; i < targetCount; i++) {
+            int y = random.nextInt(2100) + 1;
+            int m = random.nextInt(15) + 1;
+            int d = random.nextInt(35) + 1;
+
+            try {
+                MyDate date = new MyDate(y, m, d);
+                System.out.println(date);
+            } catch (IllegalArgumentException e) {
+                invalidCount++;
+            }
+        }
+        System.out.println("Generált érvénytelen dátumok száma: " + invalidCount);
     }
 }
