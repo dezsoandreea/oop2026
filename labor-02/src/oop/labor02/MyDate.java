@@ -30,8 +30,4 @@ public class MyDate {
     public String toString() {
         return String.format("%04d.%02d.%02d", year, month, day);
     }
-
-    /*public void printDate(){
-        System.out.println(year + "/" + month + "/" + day);
-    }*/
 }

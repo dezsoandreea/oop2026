@@ -1,31 +1,31 @@
 package oop.labor02;
 
 public class DateUtil {
-    public static boolean isLeapYear(int year) {
+    public static boolean LeapYear(int year) {
         return ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0));
     }
 
-    public static boolean isValidDate(int y, int m, int d) {
-        if (y <= 0 ) {
+    public static boolean isValidDate(int year, int month, int day) {
+        if (year <= 0 ) {
             return false;
         }
-        if(d < 1 || d > 31) {
+        if(day < 1 || day > 31) {
             return false;
         }
-        if(m < 1 || m > 12) {
+        if(month < 1 || month > 12) {
             return false;
         }
-        if(m == 2) {
-            if(isLeapYear(y)) {
-                return d <= 29;
+        if(month == 2) {
+            if(LeapYear(year)) {
+                return day <= 29;
             } else {
-                return d <= 28;
+                return day <= 28;
             }
         }
-        if(m == 4 || m == 6 || m == 9 || m == 11) {
-            return d <= 30;
+        if(month == 4 || month == 6 || month == 9 || month == 11) {
+            return day <= 30;
         } else {
-            return d <= 31;
+            return day <= 31;
         }
     }
 }

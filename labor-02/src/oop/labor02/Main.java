@@ -2,43 +2,38 @@ package oop.labor02;
 import java.util.Random;
 
 public class Main {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         // 1. feladat
         /*BankAccount account1 = new BankAccount(("BT1"));
         System.out.println(account1.getAccountNumber() + ": " + account1.getBalance());
         account1.deposit(1000);
         System.out.println(account1.getAccountNumber() + ": " + account1.getBalance());
         boolean result = account1.withdraw(500);
-        if (!result)
-        {
+        if (!result) {
             System.out.println("you do not have sufficient funds for this operation!");
         }
         System.out.println(account1.getAccountNumber() + ": " + account1.getBalance());
         result = account1.withdraw(1000);
-        if (!result)
-        {
+        if (!result) {
             System.out.println("you do not have sufficient funds for this operation!");
         }
         System.out.println(account1.getAccountNumber() + ": " + account1.getBalance());
         BankAccount account2 = new BankAccount("OTP00002");
-        System.out.println(account2.getAccountNumber() + ": " + account1.getBalance());
+        System.out.println(account2.getAccountNumber() + ": " + account2.getBalance());
         account2.deposit(2000);
-        System.out.println(account2.getAccountNumber() + ": " + account1.getBalance());*/
+        System.out.println(account2.getAccountNumber() + ": " + account2.getBalance());*/
 
         // 2. feladat
         /*Rectangle rectangle1 = new Rectangle(-5, 0);
         System.out.println("length: " + rectangle1.getLength() + ", width: " + rectangle1.getWidth() + ", area: " + rectangle1.area() + ", perimeter: " + rectangle1.perimeter());
         Rectangle[] rectangles = new Rectangle[10];
-        for (int i = 0; i < rectangles.length; i++)
-        {
+        for (int i = 0; i < rectangles.length; i++) {
             System.out.println(rectangles[i]);
         }
         // use a random generator
         Random rand = new Random();
         //generate positive random numbers less than a bound
-        for (int i = 0; i < rectangles.length; i++)
-        {
+        for (int i = 0; i < rectangles.length; i++) {
             double length = 1 + rand.nextInt(10);
             double width = 1 + rand.nextInt(10);
             rectangles[i] = new Rectangle(length, width);
