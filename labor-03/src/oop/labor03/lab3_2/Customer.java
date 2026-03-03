@@ -51,15 +51,15 @@ public class Customer {
     }
 
     public void closeAccount(String accountNumber) {
-        int index = -1;
+        int j = -1;
         for (int i = 0; i < numAccounts; i++) {
             if (accounts[i].getAccountNumber().equals(accountNumber)) {
-                index = i;
+                j = i;
                 break;
             }
         }
-        if (index != -1) {
-            for (int i = index; i < numAccounts - 1; i++) {
+        if (j != -1) {
+            for (int i = j; i < numAccounts - 1; i++) {
                 accounts[i] = accounts[i + 1];
             }
             accounts[--numAccounts] = null;

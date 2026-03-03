@@ -29,7 +29,7 @@ public class Main {
 
         Customer customer2 = new Customer("Mary", "WHITE");
         System.out.println(customer2);
-        customer2.setAccount(new BankAccount(("OTP00001")));
+        customer2.setAccount(new BankAccount(("OTP00002")));
         System.out.println(customer2);
 
         customer2.closeAccount();
