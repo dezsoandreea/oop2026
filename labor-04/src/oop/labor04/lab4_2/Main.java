@@ -15,31 +15,21 @@ public class Main {
                 if (line.isEmpty()) {
                     continue;
                 }
-                String firstName;
-                String lastName;
-                String[] items = line.split(",");
-                String tip = items[0].trim();
-                if (tip.equals("Customer")) {
-                    firstName = items[1].trim();
-                    lastName = items[2].trim();
+                String[] items = line.split(", ");
+                if (line.startsWith("Customer")) {
+                    String firstName = items[1].trim();
+                    String lastName = items[2].trim();
                     customers.add(new Customer(firstName, lastName));
-                }
-                if (tip.equals("Account")) {
+                }else{
                     String accountNumber = items[1].trim();
-                    double balance = Double.parseDouble(items[2].trim());
-                    customers.getLast().addAccount(new BankAccount(accountNumber));
-                    customers.getLast().getAccount(accountNumber).deposit(balance);
+                    int balance = Integer.parseInt(items[2].trim());
+                    customers.get(customers.size()-1).addAccount(new BankAccount(accountNumber, balance));
                 }
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
-        for (Customer customer : customers) {
-            System.out.println(customer.getFirstName() + " " + customer.getLastName() + " accounts:");
-            for (BankAccount account : customer.getAccount()) {
-                System.out.println(account.toString());
-            }
-        }
+        System.out.println(customers);
     }
 }
