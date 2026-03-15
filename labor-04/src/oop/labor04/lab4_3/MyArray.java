@@ -10,7 +10,7 @@ public class MyArray {
     private int length;
     private double[] elements;
 
-    public MyArray(int lenght){
+    public MyArray(int length){
         this.length = length;
         this.elements = new double[length];
     }
