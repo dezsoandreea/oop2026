@@ -1,7 +1,7 @@
-package oop.labor06;
+package oop.labor06.labor_gyak;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, Lab_06");
+
     }
 }
