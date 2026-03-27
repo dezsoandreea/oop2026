@@ -10,10 +10,18 @@ public class Matrix {
     public Matrix(int rows, int columns) {
         this.rows = rows;
         this.columns = columns;
+        this.data = new double[rows][columns];
     }
 
     public Matrix(double[][] data) {
-        this.data = data;
+        this.rows = data.length;
+        this.columns = data[0].length;
+        this.data = new double[rows][columns];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                this.data[i][j] = data[i][j];
+            }
+        }
     }
 
     public Matrix(Matrix m){
