@@ -1,0 +1,14 @@
+GHI222, Yamaha, robogo
+MNO333, Suzuki, sport
+STU444, Kawasaki, cruiser
+YZA555, Ducati, sport
+EFG666, Aprilia, robogo
+KLM777, BMW, sport
+QRS888, Harley, cruiser
+WXY999, KTM, sport
+CDE101, Honda, robogo
+IJK202, Yamaha, sport
+OPQ303, Suzuki, cruiser
+UVW404, Kawasaki, sport
+ABC505, Ducati, robogo
+GHI717, BMW, cruiser
