@@ -1,7 +1,7 @@
-package oop.labor08;
+package oop.labor08.lab8_2;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, Lab_08");
+
     }
 }
