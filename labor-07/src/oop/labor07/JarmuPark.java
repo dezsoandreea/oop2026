@@ -20,16 +20,16 @@ public class JarmuPark {
                 }
                 String[] items = line.split(",");
                 if(line.startsWith("AUTO")){
-                    String jarmu = items[1].trim();
-                    String rendszam = items[2].trim();
+                    String rendszam = items[1].trim();
+                    String marka = items[2].trim();
                     int utasszam = Integer.parseInt(items[3].trim());
-                    ujJarmu(new Auto(jarmu, rendszam, utasszam));
+                    ujJarmu(new Auto(rendszam, marka, utasszam));
                 }
                 else if(line.startsWith("MOTOR")){
-                    String jarmu = items[1].trim();
-                    String rendszam = items[2].trim();
+                    String rendszam = items[1].trim();
+                    String marka = items[2].trim();
                     String tipus = items[3].trim();
-                    ujJarmu(new Motorbicikli(jarmu, rendszam, tipus));
+                    ujJarmu(new Motorbicikli(rendszam, marka, tipus));
                 }
             }
         } catch (FileNotFoundException e) {
