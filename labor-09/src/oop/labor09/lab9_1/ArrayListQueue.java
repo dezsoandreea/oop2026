@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class ArrayListQueue implements IQueue {
     private ArrayList<Object> items;
-    public final int CAPACITY;
+    private final int CAPACITY;
 
     public ArrayListQueue(int capacity){
         this.CAPACITY = capacity;
@@ -47,7 +47,9 @@ public class ArrayListQueue implements IQueue {
 
     @Override
     public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()){
+            return false;
+        }
         ArrayListQueue that = (ArrayListQueue) o;
         return Objects.equals(items, that.items);
     }

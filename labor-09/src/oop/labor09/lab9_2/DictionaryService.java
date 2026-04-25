@@ -1,6 +1,9 @@
 package oop.labor09.lab9_2;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class DictionaryService {
     private IDictionary dictionary;
@@ -14,6 +17,19 @@ public class DictionaryService {
     }
 
     public ArrayList<String> findWordsFile(String wordFile){
-        return new ArrayList<String>();
+        ArrayList<String> unknownWords = new ArrayList<>();
+
+        try(Scanner scanner = new Scanner(new File(wordFile))){
+            while (scanner.hasNext()) {
+                String word = scanner.next().toLowerCase();
+                if (!dictionary.find(word)) {
+                    unknownWords.add(word);
+                }
+            }
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return unknownWords;
     }
 }

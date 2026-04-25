@@ -1,6 +1,7 @@
 package oop.labor09.lab9_2;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -9,15 +10,19 @@ public class ArrayListDictionary implements IDictionary{
     private ArrayList<String> words;
     private static ArrayListDictionary instance;
 
-    public ArrayListDictionary() {
+    private ArrayListDictionary() {
         this.words = new ArrayList<>();
         try (Scanner scanner = new Scanner(new File(IDictionary.DICTIONARY_FILE))) {
             while (scanner.hasNextLine()) {
-                words.add(scanner.nextLine().trim());
+                String line = scanner.nextLine();
+                if (line.isEmpty()) {
+                    continue;
+                }
+                String[] word = line.split(" ");
+                words.add(word[0]);
             }
-            //Collections.sort(words);
-        } catch (Exception e) {
-            System.out.println("Hiba a fajl beolvasasakor: " + e.getMessage());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
     }
 
@@ -30,12 +35,12 @@ public class ArrayListDictionary implements IDictionary{
 
     @Override
     public boolean add(String word) {
-        if (!find(word)) {
-            words.add(word);
-            Collections.sort(words);
-            return true;
+        if (words.contains(word)) {
+            return false;
         }
-        return false;
+        words.add(word);
+        Collections.sort(words);
+        return true;
     }
 
     @Override
