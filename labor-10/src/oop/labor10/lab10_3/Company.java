@@ -47,11 +47,11 @@ public class Company {
                 MyDate birthDate = new MyDate(year, month, day);
                 if (data.length == 6) {
                     Employee employee = new Employee(firstName, lastName, salary, birthDate);
-                    employees.add(employee);
+                    hire(employee);
                 } else {
                     String department = data[6].trim();
                     Manager manager = new Manager(firstName, lastName, salary, birthDate, department);
-                    employees.add(manager);
+                    hire(manager);
                 }
             }
         } catch (FileNotFoundException e) {

@@ -3,19 +3,19 @@ package oop.labor10.lab10_3;
 import oop.labor10.lab10_2.MyDate;
 
 public class Manager extends Employee{
-    private String departmant;
+    private String department;
 
-    public Manager(String firstName, String lastName, double salary, MyDate birthDate, String departmant) {
+    public Manager(String firstName, String lastName, double salary, MyDate birthDate, String department) {
         super(firstName, lastName, salary, birthDate);
-        this.departmant = departmant;
+        this.department = department;
     }
 
-    public String getDepartmant() {
-        return departmant;
+    public String getDepartment() {
+        return department;
     }
 
-    public void setDepartmant(String departmant) {
-        this.departmant = departmant;
+    public void setDepartment(String department) {
+        this.department = department;
     }
 
     @Override
@@ -26,7 +26,7 @@ public class Manager extends Employee{
                 ", lastName='" + lastName + '\'' +
                 ", salary=" + salary +
                 ", birthDate=" + birthDate +
-                ", departmant='" + departmant + '\'' +
+                ", department='" + department + '\'' +
                 '}';
     }
 }
