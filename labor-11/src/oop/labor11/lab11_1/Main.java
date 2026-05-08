@@ -7,28 +7,45 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         //1
-//        System.out.println(readFirstLine("path.txt"));
-//        System.out.println(readFirstLine("lab4_1_input.csv"));
-//        System.out.println(readFirstLine("alma.txt"));
+        System.out.println(readFirstLine("path.txt"));
+        System.out.println(readFirstLine("lab4_1_input.csv"));
+        System.out.println(readFirstLine("alma.txt"));
 
         //2
-//        int a, b;
-//        a=14;
-//        b=7;
-//        try {
-//            System.out.println(a + "/" + b + " = " + safeDivide(a, b));
-//        } catch (Exception e) {
-//            System.out.println(e.getMessage());
-//        }
-//        b=0;
-//        try {
-//            System.out.println(a + "/" + b + " = " + safeDivide(a, b));
-//        } catch (Exception e) {
-//            System.out.println(e.getMessage());
-//        }
+        int a, b;
+        a=14;
+        b=7;
+        try {
+            System.out.println(a + "/" + b + " = " + safeDivide(a, b));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        b=0;
+        try {
+            System.out.println(a + "/" + b + " = " + safeDivide(a, b));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        //2-mas
+        try {
+            System.out.println(registerUser("Alice", 25));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            System.out.println(registerUser("Bob", -3));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            System.out.println(registerUser("John", 176));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
         //3
-//        demonstrateFinally();
+        demonstrateFinally();
 
         //4
         BankAccount b1 = new BankAccount(500);
@@ -66,7 +83,7 @@ public class Main {
             if(sc.hasNextLine()){
                 return sc.nextLine();
             }
-            return "Empty File";
+            return "EMPTY_FILE";
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
             return "FILE_NOT_FOUND";
@@ -79,6 +96,14 @@ public class Main {
             throw new Exception("DIVISION_BY_ZERO");
         }
         return a/b;
+    }
+
+    //2-mas
+    public static String registerUser(String name, int age) throws Exception {
+        if(age<0 || age>150){
+            throw new Exception("Invalid age: " + age);
+        }
+        return "User registered: " + name + ", " + age;
     }
 
     //3

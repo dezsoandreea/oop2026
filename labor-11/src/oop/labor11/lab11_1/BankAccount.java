@@ -13,7 +13,7 @@ public class BankAccount {
 
     public void withdraw(int amount) throws InsufficientFundsExeption {
         if(amount>balance){
-            throw new InsufficientFundsExeption("Nincs elege penzed");
+            throw new InsufficientFundsExeption("Nincs eleg penzed");
         }
         balance -= amount;
     }
