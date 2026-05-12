@@ -1,0 +1,6 @@
+data/data10.txt	data/update10.txt		8	43279800
+data/data100.txt	data/update1000.txt		50	6685400
+data/data1000.txt	data/update10000.txt		507	14937900
+data/data10000.txt	data/update100000.txt		5479	41664200
+data/data100000.txt	data/update1000000.txt		98451	155964500
+data/data1000000.txt	data/update10000000.txt		5348129	824349700
