@@ -1,7 +1,5 @@
 package oop.labor12.lab12_1;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args){
         long startTime = System.nanoTime();
