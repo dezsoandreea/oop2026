@@ -11,16 +11,16 @@ public class Main {
 
         long startTime1 = System.nanoTime();
         DictionaryService service1 = new DictionaryService(DictionaryType.HASH_SET);
-        service.findWordsFile("bible.txt");
+        service1.findWordsFile("bible.txt");
         long endTime1 = System.nanoTime();
-        long timeElapsed1 = endTime - startTime;
+        long timeElapsed1 = endTime1 - startTime1;
         System.out.println("Execution time in milliseconds: "+ timeElapsed1 /1000000);
 
         long startTime2 = System.nanoTime();
         DictionaryService service2 = new DictionaryService(DictionaryType.TREE_SET);
-        service.findWordsFile("bible.txt");
+        service2.findWordsFile("bible.txt");
         long endTime2 = System.nanoTime();
-        long timeElapsed2 = endTime - startTime;
+        long timeElapsed2 = endTime2 - startTime2;
         System.out.println("Execution time in milliseconds: "+ timeElapsed2 /1000000);
     }
 }
